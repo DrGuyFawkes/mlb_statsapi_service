@@ -107,7 +107,7 @@ def merge_operation_by_replacing_existing_rows(redshift_credentials, target_tabl
 
     cur = con.cursor()
     cur.execute(sql_statement)
-    result = cur.fetchall()
+    con.commit()
 
     cur.close() 
     con.close()
