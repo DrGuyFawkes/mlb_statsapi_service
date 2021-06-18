@@ -73,13 +73,13 @@ def get_column_name(redshift_credentials, object_key):
 
 def drop_table(redshift_credentials, stage_table):
     sql_statement = f"""
-                    DROP TABLE {stage_table}
+                    DROP TABLE IF EXISTS DROP TABLE {stage_table}
                     """
     con=connect_redshift(redshift_credentials)
 
     cur = con.cursor()
     cur.execute(sql_statement)
-    result = cur.fetchall()
+    con.commit()
 
     cur.close() 
     con.close()
