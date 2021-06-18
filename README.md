@@ -1,2 +1,2 @@
 ## MLB-StatsAPI-architecture
-![Alt text](/../master/pbr-service-architecture.png?raw=true)
+![Alt text](/../main/cubs_diagram.png?raw=true)
